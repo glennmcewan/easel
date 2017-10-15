@@ -218,4 +218,13 @@ class Settings extends Model
     {
         return static::getByName('social_header_icons_user_id');
     }
+
+    /**
+     * Check if the Contact Form has been enabled or not
+     * @return bool
+     */
+    public static function isContactFormEnabled()
+    {
+        return static::getByName('contact_form_enabled', true);
+    }
 }
