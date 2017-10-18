@@ -225,6 +225,6 @@ class Settings extends Model
      */
     public static function isContactFormEnabled()
     {
-        return static::getByName('contact_form_enabled', true);
+        return static::getByName('contact_form_enabled', false);
     }
 }
