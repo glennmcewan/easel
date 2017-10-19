@@ -40,6 +40,7 @@ class SettingsController extends Controller
             'blogSeo' => Settings::blogSeo(),
             'blogAuthor' => Settings::blogAuthor(),
             'contactFormEnabled' => Settings::isContactFormEnabled(),
+            'postIsPublishedDefault' => Settings::postIsPublishedDefault(),
             'disqus' => Settings::disqus(),
             'changyan_appid' => Settings::changyanAppid(),
             'changyan_conf' => Settings::changyanConf(),
@@ -100,6 +101,7 @@ class SettingsController extends Controller
             'custom_js',
             'social_header_icons_user_id',
             'contact_form_enabled',
+            'post_is_published_default',
         ];
 
         foreach ($settings as $name) {
