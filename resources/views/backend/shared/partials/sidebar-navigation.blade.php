@@ -39,6 +39,11 @@
                     <li><a href="{!! route('canvas.admin.user.create') !!}" @if (Route::is('canvas.admin.user.create')) class="active" @endif>Add New</a></li>
                 </ul>
             </li>
+            <li @if (Route::is('canvas.admin.contact.index')) class="active" @endif>
+                <a href="{!! route('canvas.admin.contact.index') !!}">
+                    <i class="zmdi zmdi-email"></i> Contact
+                </a>
+            </li>
             <li @if (Route::is('canvas.admin.tools')) class="active" @endif><a href="{!! route('canvas.admin.tools') !!}"><i class="zmdi zmdi-wrench"></i> Tools</a></li>
             <li @if (Route::is('canvas.admin.settings')) class="active" @endif><a href="{!! route('canvas.admin.settings') !!}"><i class="zmdi zmdi-settings"></i> Settings</a></li>
         @endif

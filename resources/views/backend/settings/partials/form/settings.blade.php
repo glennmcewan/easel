@@ -54,6 +54,21 @@
 
     <div class="form-group">
         <div class="fg-line">
+            <label class="ts-label" for="contact_form_enabled">Enable Contact Form</label>
+            <div>
+                <div class="toggle-switch toggle-switch-demo" data-ts-color="blue">
+                    <input {{ \Canvas\Helpers\CanvasHelper::checked($data['contactFormEnabled']) }} type="checkbox" name="contact_form_enabled">
+                    <label for="contact_form_enabled" class="ts-helper"></label>
+                </div>
+            </div>
+            <small>When this option is checked, the Contact Form will be enabled. You can change the Contact Form settings here.</small>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <div class="fg-line">
             <label class="fg-label">Social Header Icons</label>
             <select name="social_header_icons_user_id" id="social_header_icons_user_id" class="selectpicker">
                 @foreach (\Canvas\Models\User::all() as $user)

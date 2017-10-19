@@ -18,6 +18,9 @@ Route::group([
     ], function () {
         Route::get('/', 'Canvas\Http\Controllers\Frontend\BlogController@index')->name('canvas.home');
 
+        Route::get('contact', 'Canvas\Http\Controllers\Frontend\ContactController@index')
+            ->name('canvas.frontend.contact.index');
+
         Route::group(['prefix' => RouteHelper::getBlogPrefix()], function () {
             Route::get('/', 'Canvas\Http\Controllers\Frontend\BlogController@index')->name('canvas.blog.post.index');
             Route::get('post/{slug}', 'Canvas\Http\Controllers\Frontend\BlogController@showPost')->name('canvas.blog.post.show');
@@ -137,5 +140,9 @@ Route::group([
         /* Settings page routes. */
         Route::get('/settings', 'SettingsController@index')->name('canvas.admin.settings');
         Route::post('/settings', 'SettingsController@store')->name('canvas.admin.settings');
+
+        /* Contact page routes */
+        Route::get('contact', 'ContactController@index')
+            ->name('canvas.admin.contact.index');
     });
 });

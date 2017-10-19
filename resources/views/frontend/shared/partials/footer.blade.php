@@ -9,7 +9,14 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <hr>
-                <p class="small">Proudly powered by <a href="https://cnvs.io" target="_blank">Canvas</a> &#183; <a href="{!! route('canvas.admin') !!}"><i class="fa fa-lock"></i> Sign In</a>
+                <p class="small">
+                    Proudly powered by <a href="https://cnvs.io" target="_blank">Canvas</a>.
+                    <br />
+                    <a href="{!! route('canvas.admin') !!}"><i class="fa fa-lock"></i> Sign In</a>
+                    @if(Settings::isContactFormEnabled())
+                     &#183;
+                    <a href="{!! route('canvas.frontend.contact.index') !!}"><i class="fa fa-envelope"></i> Contact</a>
+                    @endif
                 </p>
             </div>
         </div>
